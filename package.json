@@ -4,10 +4,13 @@
   "description": "Challenge for Sirius Software",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon main.js",
+    "start": "nodemon main.js --ignore data.json",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
+  "nodemonConfig": {
+    "ignore": ["*.json"]
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
