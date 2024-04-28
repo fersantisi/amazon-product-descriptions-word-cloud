@@ -1,3 +1,67 @@
 [
-	
+	{
+		"id": 1,
+		"url": "https://www.amazon.com/gp/product/B00SMBFZNG",
+		"prod": "Customers like the sound quality, value, and ease of setup of the speakers. For example, they mention it has good stereo sound separation, it's loud enough for an outdoor environment, and it'll project clear and crisp sounds. Some appreciate bluetooth connectivity, and size. That said, opinions are mixed on performance, and quality."
+	},
+	{
+		"id": 2,
+		"url": "https://www.amazon.com/gp/product/B00SMBFZNG",
+		"prod": "Customers like the sound quality, value, and ease of setup of the speakers. For example, they mention it has good stereo sound separation, it's loud enough for an outdoor environment, and it'll project clear and crisp sounds. Some appreciate bluetooth connectivity, and size. That said, opinions are mixed on performance, and quality."
+	},
+	{
+		"id": 3,
+		"url": "https://www.amazon.com/gp/product/B00SMBFZNG",
+		"prod": "Customers like the sound quality, value, and ease of setup of the speakers. For example, they mention it has good stereo sound separation, it's loud enough for an outdoor environment, and it'll project clear and crisp sounds. Some appreciate bluetooth connectivity, and size. That said, opinions are mixed on performance, and quality."
+	},
+	{
+		"id": 4,
+		"url": "https://www.amazon.com/gp/product/B00SMBFZNG",
+		"prod": "Customers like the sound quality, value, and ease of setup of the speakers. For example, they mention it has good stereo sound separation, it's loud enough for an outdoor environment, and it'll project clear and crisp sounds. Some appreciate bluetooth connectivity, and size. That said, opinions are mixed on performance, and quality."
+	},
+	{
+		"id": 5,
+		"url": "https://www.amazon.com/gp/product/B00TSUGXKE",
+		"prod": "Customers like the quality, ease of use, performance, and screen size of the tablet. For example, they mention it's sturdy, reliable, and well-made. Some appreciate the responsiveness and screen resolution. That said, opinions are mixed on the screen, battery life, and apps."
+	},
+	{
+		"id": 6,
+		"url": "https://www.amazon.com/gp/product/B00TSUGXKE",
+		"prod": "Customers like the quality, ease of use, performance, and screen size of the tablet. For example, they mention it's sturdy, reliable, and well-made. Some appreciate the responsiveness and screen resolution. That said, opinions are mixed on the screen, battery life, and apps."
+	},
+	{
+		"id": 7,
+		"url": "https://www.amazon.com/gp/product/B00SMBFZNG",
+		"prod": "Customers like the sound quality, value, and ease of setup of the speakers. For example, they mention it has good stereo sound separation, it's loud enough for an outdoor environment, and it'll project clear and crisp sounds. Some appreciate bluetooth connectivity, and size. That said, opinions are mixed on performance, and quality."
+	},
+	{
+		"id": 8,
+		"url": "https://www.amazon.com/gp/product/B00HUGXOAU",
+		"prod": "Customers like the picture quality, value, and performance of the television. For example, they mention it's a bright, clear TV with beautiful display and color. Some appreciate the ease of use. That said, opinions are mixed on sound quality and color"
+	},
+	{
+		"id": 9,
+		"url": "https://www.amazon.com/gp/product/B00CBNIXHQ",
+		"prod": "Customers like the value, quality and appearance of the monitor. For example, they mention it's a great monitor for average to mid gaming level, it looks good and that it works perfectly for their needs. Some are happy with ease of setup, and connectivity. That said, some complain about the sound quality."
+	},
+	{
+		"id": 10,
+		"url": "https://www.amazon.com/gp/product/B00TRQPVKM",
+		"prod": "Customers like the picture quality, quality, value, and sound quality of the television. For example, they mention it's a very good basic TV, has nice colors, and has a pretty good bang to buck ratio. Some appreciate the ease of setup, saying it'll be easy to mount and has no problems with the hookup. Customers are also happy with size, and weight."
+	},
+	{
+		"id": 11,
+		"url": "https://www.amazon.com/gp/product/B00TSUGXKE",
+		"prod": "Customers like the quality, ease of use, performance, and screen size of the tablet. For example, they mention it's sturdy, reliable, and well-made. Some appreciate the responsiveness and screen resolution. That said, opinions are mixed on the screen, battery life, and apps."
+	},
+	{
+		"id": 12,
+		"url": "https://www.amazon.com/gp/product/B00TSUGXKE",
+		"prod": "Customers like the quality, ease of use, performance, and screen size of the tablet. For example, they mention it's sturdy, reliable, and well-made. Some appreciate the responsiveness and screen resolution. That said, opinions are mixed on the screen, battery life, and apps."
+	},
+	{
+		"id": 13,
+		"url": "https://www.amazon.com/gp/product/B00TSUGXKE",
+		"prod": "Customers like the quality, ease of use, performance, and screen size of the tablet. For example, they mention it's sturdy, reliable, and well-made. Some appreciate the responsiveness and screen resolution. That said, opinions are mixed on the screen, battery life, and apps."
+	}
 ]
