@@ -1,6 +1,7 @@
 const express = require("express")
 const app = express()
-const router = require("./router")
+const cloudRouter = require("./routes/cloudRouter")
+const apiRouter = require("./routes/apiRouter")
 
 const PORT = 3000
 
@@ -12,4 +13,5 @@ app.use(express.urlencoded({ extended: false }))
 app.set('views', './views')
 app.set("view engine", "ejs")
 
-app.use("/", router)
+app.use("/cloud", cloudRouter)
+app.use("/api", apiRouter)

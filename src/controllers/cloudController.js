@@ -3,7 +3,7 @@ const path = require("path")
 const axios = require("axios")
 const cheerio = require("cheerio")
 
-const dataPath = path.join(__dirname, "./data.json")
+const dataPath = path.join(__dirname, "../data/data.json")
 let data = JSON.parse(fs.readFileSync(dataPath, "utf-8"))
 
 const controller = {
@@ -20,7 +20,7 @@ const controller = {
         const $ = cheerio.load(response.data)
         const prodDescription = await $("#product-summary").children("p").children("span").text().trim()
         console.log(prodDescription, ": description")
-        if(data[0] == undefined){
+        if(data.length == 0){
             id = 1
         }else{
             id = data[data.length - 1].id + 1

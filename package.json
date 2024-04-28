@@ -4,7 +4,7 @@
   "description": "Challenge for Sirius Software",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon main.js --ignore data.json",
+    "start": "nodemon src/main.js --ignore data.json",
     "debug": "node main.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
