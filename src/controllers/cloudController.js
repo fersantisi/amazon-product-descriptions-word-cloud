@@ -3,8 +3,11 @@ const path = require("path")
 const axios = require("axios")
 const cheerio = require("cheerio")
 
-const dataPath = path.join(__dirname, "../data/data.json")
-let data = JSON.parse(fs.readFileSync(dataPath, "utf-8"))
+const urlQueuePath = path.join(__dirname, "../data/urlQueue.json")
+let urlQueue = JSON.parse(fs.readFileSync(urlQueuePath, "utf-8"))
+
+const wordDictionaryPath = path.join(__dirname, "../data/wordDictionary.json")
+let wordDictionary = JSON.parse(fs.readFileSync(wordDictionaryPath, "utf-8"))
 
 const controller = {
 
@@ -13,26 +16,32 @@ const controller = {
     },
 
     updateCloud: async (req, res) => {
-        let url = req.query.productUrl
-        let id
-        console.log(url)
+        if(urlQueue.length == 0){
+            return res.send("No data")
+        }
+        let url = await urlQueue[0].url
         const response = await axios.get(url)
-        const $ = cheerio.load(response.data)
-        const prodDescription = await $("#product-summary").children("p").children("span").text().trim()
-        console.log(prodDescription, ": description")
-        if(data.length == 0){
-            id = 1
-        }else{
-            id = data[data.length - 1].id + 1
-        }
-        let newUrl = {
-            "id": id,
-            "url": url,
-            "prod": prodDescription
-        }
-        data.push(newUrl)
-        fs.writeFileSync(dataPath, JSON.stringify(data, null, "\t"))
-        return res.send(`URL stored (ID:${id})`)
+        const $ = await cheerio.load(response.data)
+        let prodDescription = await $("#product-summary").children("p").children("span").text().trim()
+        prodDescription = await prodDescription.replace(/[^\w\s\']|_/g, "").replace(/\s+/g, " ")
+        const wordArr = await prodDescription.toLowerCase().split(" ")
+        
+        let wordMap = await new Map(Object.entries(wordDictionary))
+
+        await wordArr.forEach(word => {
+            if(!wordMap.has(word)){
+                wordMap.set(word, 1)
+            }else{
+                wordMap.set(word, wordMap.get(word) + 1)
+            }
+        })
+        console.log(wordMap);
+
+        const wordObj = await Object.fromEntries(wordMap)
+
+        await fs.writeFileSync(wordDictionaryPath, JSON.stringify(wordObj, null, "\t"))
+
+        return await res.json(wordObj)
     }
 
 }

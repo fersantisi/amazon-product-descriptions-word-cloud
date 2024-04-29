@@ -1,9 +1,7 @@
 const fs = require("fs")
 const path = require("path")
-const axios = require("axios")
-const cheerio = require("cheerio")
 
-const dataPath = path.join(__dirname, "../data/data.json")
+const dataPath = path.join(__dirname, "../data/urlQueue.json")
 let data = JSON.parse(fs.readFileSync(dataPath, "utf-8"))
 
 const controller = {
@@ -12,7 +10,7 @@ const controller = {
         return res.json(data)
     },
 
-    enqueue: async (req, res) => {
+    enqueue: (req, res) => {
         let url = req.query.productUrl
         let id
         console.log(url)
