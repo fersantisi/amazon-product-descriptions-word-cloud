@@ -1,31 +1,29 @@
 const fs = require("fs")
 const path = require("path")
 
-const dataPath = path.join(__dirname, "../data/urlQueue.json")
-let data = JSON.parse(fs.readFileSync(dataPath, "utf-8"))
+const urlQueuePath = path.join(__dirname, "../data/urlQueue.json")
+const urlQueue = JSON.parse(fs.readFileSync(urlQueuePath, "utf-8"))
+
+let urlQueueMap = new Map(Object.entries(urlQueue))
 
 const controller = {
 
-    list: (req, res) => {
-        return res.json(data)
+    list: async (req, res) => {
+        const urlQueueObj = await Object.fromEntries(urlQueueMap)
+        return res.json(urlQueueObj)
     },
 
-    enqueue: (req, res) => {
+    enqueue: async (req, res) => {
         let url = req.query.productUrl
-        let id
-        console.log(url)
-        if(data.length == 0){
-            id = 1
-        }else{
-            id = data[data.length - 1].id + 1
+        if(urlQueueMap.has(url)){
+            console.log(`URL already in queue: ${url}`)
+            return res.send(`URL already in queue: ${url}\n`)
         }
-        let newUrl = {
-            "id": id,
-            "url": url,
-        }
-        data.push(newUrl)
-        fs.writeFileSync(dataPath, JSON.stringify(data, null, "\t"))
-        return res.send(`URL stored (ID:${id})`)
+        urlQueueMap.set(url, true)
+        const urlQueueObj = await Object.fromEntries(urlQueueMap)
+        fs.writeFileSync(urlQueuePath, JSON.stringify(urlQueueObj, null, "\t"))
+        console.log(`URL enqueued: ${url}`);
+        return res.send(`URL enqueued: ${url}\n`)
     }
 
 }
