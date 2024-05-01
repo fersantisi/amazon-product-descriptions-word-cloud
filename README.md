@@ -15,6 +15,23 @@ Start the server:
 npm start
 ```
 
+## Routes
+
+To display the word cloud:
+```sh
+/cloud
+```
+
+To display URLs posted in API's endpoint:
+```sh
+/api/urlQueue
+```
+
+To reset al data:
+```sh
+/reset
+```
+
 ## Provide URLs
 
 To provide URLs run:
