@@ -10,7 +10,7 @@ app.listen(PORT, console.log(`Listening on port ${PORT} -> http://localhost:${PO
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }))
 
-app.set('views', './views')
+app.set('views', './src/views')
 app.set("view engine", "ejs")
 
 app.use("/cloud", cloudRouter)

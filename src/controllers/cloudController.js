@@ -55,8 +55,10 @@ const controller = {
                     }
                 })
             }
-            //urlQueueMap.set(key, false)
+            urlQueueMap.set(key, false)
         }
+
+        const maxVal = Math.max(...wordMap.values())
 
         const wordObj = await Object.fromEntries(wordMap)
         const urlQueueObj = await Object.fromEntries(urlQueueMap)
@@ -64,9 +66,9 @@ const controller = {
         fs.writeFileSync(urlQueuePath, JSON.stringify(urlQueueObj, null, "\t"))
         fs.writeFileSync(wordDictionaryPath, JSON.stringify(wordObj, null, "\t"))
 
-        return await res.json(wordObj)
-    }
+        await res.render('./index', {map: wordMap, maxVal})
 
+}
 }
 
 module.exports = controller
