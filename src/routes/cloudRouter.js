@@ -3,6 +3,6 @@ const router = express.Router()
 const cloudController = require("../controllers/cloudController")
 
 router.get("/", cloudController.updateCloud)
-//router.post("/", cloudController.updateCloud)
+router.get("/reset", cloudController.resetJsons)
 
 module.exports = router
