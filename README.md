@@ -27,6 +27,11 @@ To display URLs posted in API's endpoint:
 /api/urlQueue
 ```
 
+To display word dictionary generated:
+```sh
+/api/wordMap
+```
+
 To reset al data:
 ```sh
 /reset
