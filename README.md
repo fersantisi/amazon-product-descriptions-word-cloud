@@ -1,4 +1,4 @@
-# amazon-product-descriptions-word-cloud
+# Amazon's Product Descriptions' Word Cloud
 Challenge for Sirius Software developed in Node.JS.
 
 ## Installation
